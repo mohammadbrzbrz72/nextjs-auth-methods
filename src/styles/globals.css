@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "./reset.css";
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -24,4 +26,24 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+.web-layout {
+  width: 1280px;
+  padding-inline: 40px;
+}
+.auth-layout {
+}
+
+@media screen and (max-width: 1280px) {
+  .web-layout {
+    width: 100%;
+    padding-inline: 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .web-layout {
+    padding-inline: 20px;
+  }
 }
