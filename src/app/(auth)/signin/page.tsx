@@ -25,14 +25,34 @@ const SignInPage = () => {
           console.log(data);
         }}
       >
-        <TextInput name="email" placeholder="example@mail.com" />
-        <TextInput name="password" placeholder="******" />
+        <TextInput
+          type="email"
+          name="email"
+          placeholder="example@mail.com"
+          options={{
+            required: {
+              value: true,
+              message: "Email is required",
+            },
+          }}
+        />
+        <TextInput
+          name="password"
+          placeholder="******"
+          options={{
+            required: true,
+            minLength: {
+              value: 6,
+              message: "Password must be at least 6 characters",
+            },
+          }}
+        />
 
         <div className={styles.btnBox}>
           <Button
             className={styles.form.button}
             buttonType="submit"
-            loading={true}
+            loading={false}
           >
             Login Now
           </Button>
