@@ -1,6 +1,8 @@
 /** @jsxImportSource @emotion/react */
 "use client";
 
+import Link from "next/link";
+
 import { TextInput, OAuthButton, Button, TextDivider } from "@/components";
 import styles from "./styles";
 
@@ -25,7 +27,7 @@ const SignUpPage = () => {
         </Button>
       </div>
       <TextDivider data={["Or"]} className={styles.divider} />
-      <div className={"flex flex-col gap-4"}>
+      <div className={styles.oauthBox}>
         <OAuthButton src="/images/auth/google.png" alt="google" name="google" />
         <OAuthButton
           src="/images/auth/twitter.png"
@@ -43,9 +45,12 @@ const SignUpPage = () => {
           name="facebook"
         />
       </div>
-      <div className="grid place-content-center mt-5">
-        <span className="text-neutral-600 text-base">
-          {"Don't"} have an account? Sign Up
+      <div className={styles.signBox.root}>
+        <span className={styles.signBox.text}>
+          {"Don't"} have an account?{" "}
+          <Link className={styles.signBox.link} href="/signin">
+            Sign In
+          </Link>
         </span>
       </div>
     </div>

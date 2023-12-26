@@ -26,6 +26,20 @@ const styles = {
   divider: `
     mb-5
   `,
+  oauthBox: `
+    flex flex-col gap-4
+  `,
+  signBox: {
+    root: `
+      grid place-content-center mt-6
+    `,
+    text: `
+      text-neutral-600 text-base
+    `,
+    link: `
+      font-bold
+    `,
+  },
 };
 
 export default styles;
