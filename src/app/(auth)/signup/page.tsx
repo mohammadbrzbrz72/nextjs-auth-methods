@@ -16,9 +16,7 @@ const SignUpPage = () => {
   return (
     <div className={styles.root.cls} css={styles.root.css}>
       <h1 className={styles.title}>Sign Up</h1>
-      <div className={styles.description}>
-        How to i get started lorem ipsum dolor at?
-      </div>
+      <div className={styles.description}>Sign up to become a member</div>
       <FormProvider
         className={styles.form.root}
         onSubmit={(data) => {
@@ -95,7 +93,7 @@ const SignUpPage = () => {
       </div>
       <div className={styles.signBox.root}>
         <span className={styles.signBox.text}>
-          Do have an account?{" "}
+          Already have an account?{" "}
           <Link className={styles.signBox.link} href="/signin">
             Sign In
           </Link>

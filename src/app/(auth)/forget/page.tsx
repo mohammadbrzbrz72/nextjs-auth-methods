@@ -57,8 +57,8 @@ const ForgetPage = () => {
       />
       <h1 className={styles.title}>Forgot your password</h1>
       <span className={styles.description}>
-        Please enter your email address {"you'd"} like your password reset
-        information sent to{" "}
+        Lost your password? Please enter your email address, You will receive a
+        link to create a new password.
       </span>
 
       <FormProvider

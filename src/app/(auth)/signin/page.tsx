@@ -16,9 +16,7 @@ const SignInPage = () => {
   return (
     <div className={styles.root.cls} css={styles.root.css}>
       <h1 className={styles.title}>Sign In</h1>
-      <div className={styles.description}>
-        How to i get started lorem ipsum dolor at?
-      </div>
+      <div className={styles.description}>Log in to access your account</div>
       <FormProvider
         className={styles.form.root}
         onSubmit={(data) => {
