@@ -1,8 +1,7 @@
+import { useState } from "react";
 import { useFormContext } from "react-hook-form";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
-import { useState } from "react";
-
 import clsx from "clsx";
 
 import type { ITextInput } from "./types";
