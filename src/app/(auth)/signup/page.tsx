@@ -40,6 +40,7 @@ const SignUpPage = () => {
               <TextInput
                 name="password"
                 placeholder="******"
+                isPassword
                 options={{
                   required: true,
                   minLength: {
@@ -51,6 +52,7 @@ const SignUpPage = () => {
               <TextInput
                 name="confirm_password"
                 placeholder="******"
+                isPassword
                 options={{
                   required: true,
                   validate: (val: string) => {
