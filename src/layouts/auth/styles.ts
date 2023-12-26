@@ -4,7 +4,7 @@ const styles = {
   root: {
     css: css`
       width: 1366px;
-      height: 768px;
+      height: 868px;
     `,
     cls: `
       grid grid-cols-2
@@ -20,10 +20,11 @@ const styles = {
       background: url("/images/auth/rectangle.png"),
         linear-gradient(218deg, #9181f4 -5.84%, #5038ed 106.73%),
         lightgray 0% 0% / 100px 100px repeat;
+      background-size: cover;
     `,
     cls: `
         grid place-items-center
-        bg-cover
+      
         rounded-r-3xl
       `,
   },

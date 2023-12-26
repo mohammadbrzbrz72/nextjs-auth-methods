@@ -1,3 +1,4 @@
+import { useFormContext } from "react-hook-form";
 import clsx from "clsx";
 
 import { ITextInput } from "./types";
@@ -12,6 +13,14 @@ const styles = {
   `,
 };
 
-export const TextInput = ({ className, ...props }: ITextInput) => {
-  return <input className={clsx(styles.root, className)} {...props} />;
+export const TextInput = ({ className, name, placeholder }: ITextInput) => {
+  const { register } = useFormContext(); // retrieve all hook methods
+
+  return (
+    <input
+      className={clsx(styles.root, className)}
+      placeholder={placeholder}
+      {...register(name)}
+    />
+  );
 };

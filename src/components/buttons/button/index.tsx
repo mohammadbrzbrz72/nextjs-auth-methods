@@ -18,7 +18,11 @@ export const Button: React.FC<IButton> = ({
       type={buttonType}
       onClick={onClick}
     >
-      {loading ? <CircularProgress /> : children}
+      {loading ? (
+        <CircularProgress size={20} style={{ color: "white" }} />
+      ) : (
+        children
+      )}
     </button>
   );
 };

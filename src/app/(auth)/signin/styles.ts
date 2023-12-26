@@ -40,6 +40,13 @@ const styles = {
       font-bold
     `,
   },
+  btnBox: `
+    flex flex-col items-center
+  `,
+  forget: `
+    text-sm font-bold text-center
+    mt-1
+  `,
 };
 
 export default styles;
