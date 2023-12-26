@@ -12,16 +12,16 @@ const styles = {
       text-black text-3xl font-bold uppercase text-center
     `,
   description: `
-      text-neutral-600 text-base font-normal text-center
-    `,
+    text-neutral-600 text-base font-normal text-center
+  `,
   form: {
     root: `
-        flex flex-col gap-4 items-center
-        mt-6 pb-6
-      `,
+      flex flex-col gap-4 items-center
+      mt-6 pb-6
+    `,
     button: `
-        mt-2
-      `,
+      mt-2
+    `,
   },
   divider: `
     mb-5
@@ -45,7 +45,7 @@ const styles = {
   `,
   forget: `
     text-sm font-bold text-center
-    mt-1
+    mt-3
   `,
 };
 
