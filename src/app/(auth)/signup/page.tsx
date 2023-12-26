@@ -14,8 +14,27 @@ const SignUpPage = () => {
         How to i get started lorem ipsum dolor at?
       </div>
       <div className={styles.form.root}>
-        <TextInput name="email" placeholder="example@mail.com" />
-        <TextInput name="password" placeholder="******" />
+        <TextInput
+          name="email"
+          placeholder="example@mail.com"
+          options={{
+            required: {
+              value: true,
+              message: "Email is required",
+            },
+          }}
+        />
+        <TextInput
+          name="password"
+          placeholder="******"
+          options={{
+            required: true,
+            minLength: {
+              value: 6,
+              message: "Password must be at least 6 characters",
+            },
+          }}
+        />
 
         <Button
           className={styles.form.button}
