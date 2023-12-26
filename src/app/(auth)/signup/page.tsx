@@ -3,7 +3,13 @@
 
 import Link from "next/link";
 
-import { TextInput, OAuthButton, Button, TextDivider } from "@/components";
+import {
+  TextInput,
+  OAuthButton,
+  Button,
+  TextDivider,
+  FormProvider,
+} from "@/components";
 import styles from "./styles";
 
 const SignUpPage = () => {
@@ -13,7 +19,12 @@ const SignUpPage = () => {
       <div className={styles.description}>
         How to i get started lorem ipsum dolor at?
       </div>
-      <div className={styles.form.root}>
+      <FormProvider
+        className={styles.form.root}
+        onSubmit={(data) => {
+          console.log(data);
+        }}
+      >
         <TextInput
           name="email"
           placeholder="example@mail.com"
@@ -43,7 +54,7 @@ const SignUpPage = () => {
         >
           Sign up
         </Button>
-      </div>
+      </FormProvider>
       <TextDivider data={["Or"]} className={styles.divider} />
       <div className={styles.oauthBox}>
         <OAuthButton src="/images/auth/google.png" alt="google" name="google" />
