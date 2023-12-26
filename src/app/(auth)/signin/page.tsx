@@ -1,7 +1,11 @@
 import React from "react";
 
-const SignUpPage = () => {
-  return <div className="border">SignUpPage</div>;
+const SignInPage = () => {
+  return (
+    <div className="border">
+      <div className="text-black text-3xl font-bold uppercase">Login</div>
+    </div>
+  );
 };
 
-export default SignUpPage;
+export default SignInPage;
