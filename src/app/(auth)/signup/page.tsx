@@ -38,9 +38,8 @@ const SignUpPage = () => {
 
         <Button
           className={styles.form.button}
-          onClick={() => {
-            console.log("Hi click");
-          }}
+          buttonType="submit"
+          loading={false}
         >
           Sign up
         </Button>
