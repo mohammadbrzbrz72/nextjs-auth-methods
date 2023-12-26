@@ -39,6 +39,7 @@ const SignInPage = () => {
         <TextInput
           name="password"
           placeholder="******"
+          isPassword
           options={{
             required: true,
             minLength: {
