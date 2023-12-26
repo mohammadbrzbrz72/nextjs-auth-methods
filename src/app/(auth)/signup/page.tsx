@@ -24,37 +24,54 @@ const SignUpPage = () => {
         onSubmit={(data) => {
           console.log(data);
         }}
-      >
-        <TextInput
-          name="email"
-          placeholder="example@mail.com"
-          options={{
-            required: {
-              value: true,
-              message: "Email is required",
-            },
-          }}
-        />
-        <TextInput
-          name="password"
-          placeholder="******"
-          options={{
-            required: true,
-            minLength: {
-              value: 6,
-              message: "Password must be at least 6 characters",
-            },
-          }}
-        />
+        render={({ watch }) => {
+          return (
+            <>
+              <TextInput
+                name="email"
+                placeholder="example@mail.com"
+                options={{
+                  required: {
+                    value: true,
+                    message: "Email is required",
+                  },
+                }}
+              />
+              <TextInput
+                name="password"
+                placeholder="******"
+                options={{
+                  required: true,
+                  minLength: {
+                    value: 6,
+                    message: "Password must be at least 6 characters",
+                  },
+                }}
+              />
+              <TextInput
+                name="confirm_password"
+                placeholder="******"
+                options={{
+                  required: true,
+                  validate: (val: string) => {
+                    if (watch("password") != val) {
+                      return "Your passwords do no match";
+                    }
+                  },
+                }}
+              />
 
-        <Button
-          className={styles.form.button}
-          buttonType="submit"
-          loading={false}
-        >
-          Sign up
-        </Button>
-      </FormProvider>
+              <Button
+                className={styles.form.button}
+                buttonType="submit"
+                loading={false}
+              >
+                Sign up
+              </Button>
+            </>
+          );
+        }}
+      />
       <TextDivider data={["Or"]} className={styles.divider} />
       <div className={styles.oauthBox}>
         <OAuthButton src="/images/auth/google.png" alt="google" name="google" />

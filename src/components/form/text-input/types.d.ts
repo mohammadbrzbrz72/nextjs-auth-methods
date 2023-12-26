@@ -6,4 +6,5 @@ export interface ITextInput {
   placeholder: string;
   name: string;
   options?: RegisterOptions<FieldValues, string> | undefined;
+  isPassword?: boolean;
 }
