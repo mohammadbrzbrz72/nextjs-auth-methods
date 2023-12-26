@@ -7,7 +7,7 @@ const styles = {
   type: {
     primary: `
       bg-gradient-to-r from-indigo-400 to-indigo-600
-      text-white text-xs font-bold
+      text-white text-sm font-bold
       shadow
     `,
   },

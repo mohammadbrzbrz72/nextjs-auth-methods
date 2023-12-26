@@ -15,7 +15,7 @@ const SignUpPage = () => {
       </div>
       <div className={styles.form.root}>
         <TextInput name="email" placeholder="example@mail.com" />
-        <TextInput name="password" placeholder="example@mail.com" />
+        <TextInput name="password" placeholder="******" />
 
         <Button
           className={styles.form.button}
@@ -23,7 +23,7 @@ const SignUpPage = () => {
             console.log("Hi click");
           }}
         >
-          Login Now
+          Sign up
         </Button>
       </div>
       <TextDivider data={["Or"]} className={styles.divider} />
@@ -47,7 +47,7 @@ const SignUpPage = () => {
       </div>
       <div className={styles.signBox.root}>
         <span className={styles.signBox.text}>
-          {"Don't"} have an account?{" "}
+          Do have an account?{" "}
           <Link className={styles.signBox.link} href="/signin">
             Sign In
           </Link>
