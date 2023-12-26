@@ -1,7 +1,7 @@
 /** @jsxImportSource @emotion/react */
 "use client";
 
-import { TextInput, OAuthButton, Button } from "@/components";
+import { TextInput, OAuthButton, Button, TextDivider } from "@/components";
 import styles from "./styles";
 
 const SignUpPage = () => {
@@ -24,7 +24,7 @@ const SignUpPage = () => {
           Login Now
         </Button>
       </div>
-
+      <TextDivider data={["Or"]} className={styles.divider} />
       <div className={"flex flex-col gap-4"}>
         <OAuthButton src="/images/auth/google.png" alt="google" name="google" />
         <OAuthButton

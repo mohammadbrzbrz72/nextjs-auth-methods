@@ -23,6 +23,9 @@ const styles = {
         mt-2
       `,
   },
+  divider: `
+    mb-5
+  `,
 };
 
 export default styles;
