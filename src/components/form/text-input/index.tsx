@@ -40,7 +40,7 @@ export const TextInput = ({
             className="w-fit h-fit absolute right-4 top-3 cursor-pointer"
             onClick={() => setShowPassword((bool) => !bool)}
           >
-            {showPassword ? <VisibilityIcon /> : <VisibilityOffIcon />}
+            {showPassword ? <VisibilityOffIcon /> : <VisibilityIcon />}
           </div>
         )}
       </div>
