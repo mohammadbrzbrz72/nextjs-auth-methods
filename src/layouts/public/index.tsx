@@ -1,16 +1,17 @@
-import React from "react";
-
 import Header from "./header";
 import Footer from "./footer";
 
 const styles = {
   root: `
-    w-full h-screen
+    w-full
   `,
   wrapper: `
     web-layout
+    flex flex-col justify-between
+    min-h-screen
     mx-auto
-    border
+  `,
+  content: `
   `,
 };
 
@@ -19,7 +20,7 @@ const PublicLayout = ({ children }: { children: React.ReactNode }) => {
     <div className={styles.root}>
       <div className={styles.wrapper}>
         <Header />
-        <div>{children}</div>
+        <div className={styles.content}>{children}</div>
         <Footer />
       </div>
     </div>
